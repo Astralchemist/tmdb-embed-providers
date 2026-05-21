@@ -1,5 +1,10 @@
 # tmdb-embed-providers
 
+[![npm version](https://img.shields.io/npm/v/tmdb-embed-providers.svg)](https://www.npmjs.com/package/tmdb-embed-providers)
+[![npm downloads](https://img.shields.io/npm/dm/tmdb-embed-providers.svg)](https://www.npmjs.com/package/tmdb-embed-providers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Bundle size](https://img.shields.io/bundlephobia/minzip/tmdb-embed-providers)](https://bundlephobia.com/package/tmdb-embed-providers)
+
 Curated, typed list of TMDB-id-keyed video embed providers, with a built-in health-check helper. Two tiers:
 
 - **`core`** — providers verified live and serving embed markup at release time. Seven entries: `vidfast`, `vidlink`, `vidsrc.pm`, `2embed.skin`, `vidsrc.to`, `vidsrc.cc`, `2embed.cc`.
