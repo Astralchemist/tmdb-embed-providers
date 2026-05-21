@@ -1,7 +1,7 @@
 {
   "name": "tmdb-embed-providers",
-  "version": "0.1.0",
-  "description": "Curated, typed list of TMDB-id-keyed video embed providers for movies and TV. Core tier (stable English sources) plus an extras tier biased toward Asian-content libraries with multilingual subtitles. Zero dependencies.",
+  "version": "0.1.1",
+  "description": "Curated, typed list of TMDB-id-keyed video embed providers for movies and TV. Core + Asian-friendly extras tiers, plus a built-in probeProvider() health check. Zero runtime dependencies.",
   "keywords": [
     "tmdb",
     "embed",

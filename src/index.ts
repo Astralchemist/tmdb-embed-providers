@@ -1,22 +1,15 @@
-import { PROVIDERS } from './providers.js';
-import type { ContentBias, Provider, ProviderFilter, Tier } from './types.js';
+import { listProviders } from './filter.js';
+import type { Provider, ProviderFilter } from './types.js';
 
 export { PROVIDERS } from './providers.js';
 export type { ContentBias, Provider, ProviderFilter, Tier } from './types.js';
-
-function getProviders(filter?: ProviderFilter): readonly Provider[] {
-  if (!filter) return PROVIDERS;
-  return PROVIDERS.filter((p) => {
-    if (filter.tiers && !filter.tiers.includes(p.tier)) return false;
-    if (filter.bias && !filter.bias.includes(p.bias)) return false;
-    if (filter.ids && !filter.ids.includes(p.id)) return false;
-    return true;
-  });
-}
-
-export function listProviders(filter?: ProviderFilter): readonly Provider[] {
-  return getProviders(filter);
-}
+export { listProviders } from './filter.js';
+export {
+  probeProvider,
+  probeAll,
+  findLiveProviderIds,
+} from './probe.js';
+export type { ProbeOptions, ProbeResult, ProbeStatus } from './probe.js';
 
 /**
  * Build the ordered list of movie iframe URLs for a TMDB id. By default
@@ -25,7 +18,7 @@ export function listProviders(filter?: ProviderFilter): readonly Provider[] {
  */
 export function buildMovieSources(tmdbId: number | string, filter?: ProviderFilter): string[] {
   const out: string[] = [];
-  for (const provider of getProviders(filter)) {
+  for (const provider of listProviders(filter)) {
     const url = provider.buildMovieUrl(tmdbId);
     if (url) out.push(url);
   }
@@ -43,7 +36,7 @@ export function buildTvSources(
   filter?: ProviderFilter,
 ): string[] {
   const out: string[] = [];
-  for (const provider of getProviders(filter)) {
+  for (const provider of listProviders(filter)) {
     const url = provider.buildTvUrl(tmdbId, season, episode);
     if (url) out.push(url);
   }
