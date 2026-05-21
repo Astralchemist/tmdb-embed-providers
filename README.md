@@ -1,5 +1,6 @@
 # tmdb-embed-providers
 
+[![CI](https://github.com/Astralchemist/tmdb-embed-providers/actions/workflows/ci.yml/badge.svg)](https://github.com/Astralchemist/tmdb-embed-providers/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/tmdb-embed-providers.svg)](https://www.npmjs.com/package/tmdb-embed-providers)
 [![npm downloads](https://img.shields.io/npm/dm/tmdb-embed-providers.svg)](https://www.npmjs.com/package/tmdb-embed-providers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
