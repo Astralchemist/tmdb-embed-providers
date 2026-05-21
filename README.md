@@ -119,6 +119,10 @@ This does not mean the URLs will keep working. Use `probeProvider()` in producti
 ### 0.1.0
 - Initial release.
 
+## Disclaimer
+
+This library is a curated list of URL templates pointing at third-party embed providers. Users are responsible for ensuring they have the right to access, embed, and redistribute the content those providers serve. The authors do not operate, endorse, or have any relationship with the upstream providers and make no representation about the legality of their content.
+
 ## License
 
 MIT
